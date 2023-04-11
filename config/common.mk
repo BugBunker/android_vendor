@@ -87,6 +87,12 @@ ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 include vendor/lineage/config/lineage_sdk_common.mk
 endif
 
+ifeq ($(WITH_GAPPS), true)
+# GApps
+$(call inherit-product, vendor/gms/products/gms.mk)
+include vendor/gms/products/board.mk
+endif
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
