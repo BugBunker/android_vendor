@@ -2,7 +2,7 @@ PRODUCT_VERSION_MAJOR = 13
 PRODUCT_VERSION_MINOR = 5
 
 # Increase CR Version with each major release.
-CR_VERSION := 13
+CR_VERSION := 13.0
 
 # Internal version
 LINEAGE_VERSION := GhostDroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-$(LINEAGE_BUILD)-v$(CR_VERSION)
