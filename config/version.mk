@@ -1,5 +1,5 @@
 PRODUCT_VERSION_MAJOR = 13
-PRODUCT_VERSION_MINOR = 5
+PRODUCT_VERSION_MINOR = 6
 
 # Increase CR Version with each major release.
 CR_VERSION := 13.0
