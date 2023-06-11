@@ -93,6 +93,12 @@ $(call inherit-product, vendor/gms/products/gms.mk)
 include vendor/gms/products/board.mk
 endif
 
+ifeq ($(WITH_GAPPS),true)
+GHOST_EDITION := PIXEL
+else
+GHOST_EDITION := AOSP
+endif
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
@@ -216,6 +222,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/lineage/overlay/no-rro
 
 PRODUCT_PACKAGES += \
+    TrichromeWebView \
     DocumentsUIOverlay \
     NetworkStackOverlay
 
